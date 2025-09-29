@@ -4,15 +4,19 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev":"bun --watch src/index.ts",
-    "build":"bun build ./src/index.ts --outdir ./dist",
-    "start":"bun run  ./dist/index.js"
+    "dev": "bun ./src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist",
+    "start": "bun run  ./dist/index.js"
   },
   "devDependencies": {
-    "@repo/typescript-config":"*",
-    "@types/bun": "latest"
+    "@repo/typescript-config": "*",
+    "@types/bun": "latest",
+    "@types/ws": "^8.18.1"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
   }
 }
